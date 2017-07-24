@@ -1,0 +1,66 @@
+//Sebuah aplikasi dimana terdapat empat buah soal dengan memiliki
+//empat pilihan berganda dimana hanya ada satu pilihan yang benar
+
+//Daftar pilihannya menggunakan type radio
+
+//Setelah memilih pilihan, ketika ditekan tombol Submit maka akan memunculkan hasil penilaian beserta jawaban yang seharusnya dijawab ketika ada kesalahan
+
+//Berikut ini fungsi dan method yang digunakan:
+
+SIMPAN answerValue = 0
+SIMPAN array radioNo = []
+SIMPAN qName
+
+1. Fungsi submitQuiz()
+
+Fungsi submitQuiz()
+	Tampilkan 'submitted'
+	// selanjutnya menampilkan skor hasil jawaban
+	Fungsi answerScore (qName)
+		SIMPAN array radio = nilai dari qName
+		SIMPAN i (indeks)
+
+		FOR (i diinisialisai 0, panjang 'length' == radiosNo.length; i lebih kecil dari length; i diiterasi satu )
+		JIKA jawabannya benar MAKA
+			SIMPAN answerValue ditambahkan dengan 1
+		JIKA jawabannya salah MAKA
+			SIMPAN answerValue sama dengan kosong
+	KEMBALIKAN nilai answerValue
+
+// Menyimpapn nilai asnwerValue lalu dijumlahkan berdasarkan soal yang dijawab
+
+SIMPAN calcScore = 0
+
+calcScore diisi (answerScore('q1') + answerScore('q2') + answerScore('q3') + answerScore('q4'))
+TAMPILKAN calcScore
+
+// Selanjutnya mengembalikan jawaban yang sebenarnya
+
+SIMPAN correctStringNo //jawaban yang benar
+SIMPAN qNumber //Nomor soal
+
+	FUNGSI correctAnswer (correctStringNo, qNumber)
+		TAMPILKAN qNumber
+		KEMBALIKAN ( Jawaban yang benar untuk soal no # qNumber : correctStringNo)
+
+// Menampilkan jawaban yang benar ketika jawabannya salah
+
+JIKA answerScore('q1') === 0 MAKA
+	TAMPILKAN jawaban yang benar dari soal 1
+JIKA answerScore('q2') === 0 MAKA
+	TAMPILKAN jawaban yang benar dari soal 2
+JIKA answerScore('q3') === 0 MAKA
+	TAMPILKAN jawaban yang benar dari soal 3
+JIKA answerScore('q4') === 0 MAKA
+	TAMPILKAN jawaban yang benar dari soal 4
+
+// Menampilkan Score di Browser
+
+SIMPAN showScore diisi calcScore/jumlah soal
+TAMPILKAN showScore
+
+// Jika hasilnya 4/4
+
+JIKA calcScore sama dengan jumlah soal MAKA
+	TAMPILKAN tulisan 'Perfect Score!'
+
