@@ -1,5 +1,18 @@
 // scripts here:
 
+function hasil(nama, skor){
+		this.nama = nama;
+		this.skor = skor;
+}
+
+
+function othername() {
+    var input = document.getElementById("userInput").value;
+    alert(input);
+}
+
+othername();
+
 	function submitQuiz() {
 		console.log('submitted');
 
@@ -74,3 +87,4 @@ $(document).ready(function() {
 	});
 
 });
+
