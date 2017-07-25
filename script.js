@@ -1,5 +1,18 @@
 // scripts here:
 
+function hasil(nama, skor){
+		this.nama = nama;
+		this.skor = skor;
+}
+
+
+function othername() {
+    var input = document.getElementById("userInput").value;
+    alert(input);
+}
+
+othername();
+
 	function submitQuiz() {
 		console.log('submitted');
 
@@ -27,7 +40,7 @@
 	// function to return correct answer string
 		function correctAnswer (correctStringNo, qNumber) {
 			console.log("qNumber: " + qNumber);  // logs 1,2,3,4 after called below
-			return ("Jawaban yang benar untuk nomor #" + qNumber + ": &nbsp;<strong>" +
+			return ("Jawaban yang benar #" + qNumber + ": &nbsp;<strong>" +
 				(document.getElementById(correctStringNo).innerHTML) + "</strong>");
 			}
 
@@ -57,11 +70,14 @@
 		var showScore = "Your Score: " + calcScore +"/" + questionCounter;
 	// if 4/4, "perfect score!"
 		if (calcScore === questionCounter) {
-			showScore = showScore + "&nbsp; <strong>Perfect Score!</strong>"
-			alert ("KAMU SUKSES");
+			showScore = showScore + "&nbsp; <strong>Perfect Score!</strong>";
+			alert ('Kamu berhasil!');
 		}else{
-			alert ("KAMU GAGAL. Makan dulu sanah!!");
+			alert ('Kamu gagal, makan dulu sana!')
+		}
+		;
 		document.getElementById('userScore').innerHTML = showScore;
+
 	}
 
 $(document).ready(function() {
@@ -71,3 +87,4 @@ $(document).ready(function() {
 	});
 
 });
+
