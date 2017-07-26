@@ -11,7 +11,13 @@ SIMPAN answerValue = 0
 SIMPAN array radioNo = []
 SIMPAN qName
 
-1. Fungsi submitQuiz()
+//Membuat sebuah object konstraktor
+//Objek ini menampung nama peserta dan menyimpan skornya
+
+Fungsi hasil(parameternama, parameterscore){
+	parameternama diisi dengan nama objek;
+	parameterscore diisi dengan score objek;
+}
 
 Fungsi submitQuiz()
 	Tampilkan 'submitted'
