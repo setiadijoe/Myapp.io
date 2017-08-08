@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>Learn JS DOM Event</title>
+    <!-- baris style.css bisa dimasukkin ke html tapi bisa dipisah cuman males mindahin -->
+    <link rel='stylesheet' type='text/css' href='style.css'>
+  </head>
+
+  <body>
+  <!-- ini baris div ada banyak button -->
+    <div id="container">
+
+      <button id="log-on-hover-button" class="btn">Registration Form</button>
+
+      <form id="main-form" action='finish.html' method='post'>
+
+        <fieldset>
+
+          <legend>Isi Data Diri</legend>
+
+          <p>Username: </p>
+          <input id='username' name='nama' type="text" placeholder='tulis nama lengkapmu!' label = 'username' />
+          
+
+          <p>E-mail Address: </p>
+          <input id='email' type="email" placeholder='email lengkap' label= 'email' />
+
+          <p>Confirm E-mail Address: </p>
+          <input id='emailconfirm' type="email" placeholder='alamat email harus sama' label= 'emailconfirm' />
+
+          <p>Password: </p>
+          <input id='password' type='password' placeholder='Password' label = 'password' />
+
+          <p>Confirm Password: </p>
+          <input id='confirmpassword' type='password' placeholder='ConfirmPassword' label = 'confirmpassword' />
+
+          <input type="submit" class="btn" value="Submit Form" />
+        </fieldset>
+
+      </form>
+
+    </div>
+    <script src="js-dom-events-script.js"></script>
+  </body>
+</html>
